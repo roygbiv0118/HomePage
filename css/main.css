@@ -379,14 +379,14 @@ ul li {
     -webkit-transform: translate3d(0, 200%, 0);
     transform: translate3d(0, 200%, 0); }
 
-.work-box:hover img {
+.photo-box:hover img {
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -webkit-transform: scale(1.2);
   transform: scale(1.2); }
-.work-box:hover .overlay {
+.photo-box:hover .overlay {
   opacity: 1; }
-  .work-box:hover .overlay h5, .work-box:hover .overlay p {
+  .photo-box:hover .overlay h5, .photo-box:hover .overlay p {
     opacity: 1;
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
