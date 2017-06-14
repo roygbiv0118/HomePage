@@ -7,9 +7,14 @@
 <!--<![endif]-->
 <head>
     <meta charset="utf-8">
+
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>主页</title>
+
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<link rel="Stylesheet" type="text/css" href="js/scroller/css/smoothDivScroll.css" />
+	
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/flexslider.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -17,354 +22,118 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/font-icon.css">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <!-- header section -->
-    <section class="banner" role="banner">
-        <!--header navigation -->
-        <header id="header">
-            <div class="header-content clearfix">
-                <a class="logo" href="index.html"><img src="images/logo.png" alt=""></a>
-                <nav class="navigation" role="navigation">
-                    <ul class="primary-nav">
-                        <li><a href="about.html">关于</a></li>
-                        <li><a href="#">联系</a></li>
-                    </ul>
-                </nav>
-                <a href="#" class="nav-toggle">Menu<span></span></a>
-            </div>
-        </header>
-        <!--header navigation -->
-    </section>
-    <!-- header section -->
-    <!-- text banner section -->
-    <section id="banner" class="banner no-padding">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-                <div class="flexslider">
-                    <ul class="slides">
-                        <li>
-                            <div class="col-md-12">
-                                <blockquote>
-                                    <h1>大家好！</h1>
-                                    <p>我是朱栩可</p>
-                                </blockquote>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="col-md-12">
-                                <blockquote>
-                                    <h1>大家好！</h1>
-                                    <table border="0">
-                                        <tr>
-                                            <td width="100"><p>宝宝</p></td>
-                                            <td width="100"><p id='numDays'> </p></td>
-                                            <td><p> 天了</p></td>
-                                        </tr>
-                                    </table>
-                                    <script type="text/javascript">
-                                        function tab(date) {
-                                            var oDate = new Date();
-                                            var nY = oDate.getFullYear();
-                                            var nM = oDate.getMonth();
-                                            var nD = oDate.getDate();
-                                            var newDate = new Date(nY, nM, nD, 0, 0, 0);
-                                            var date = date.split('-');
-                                            var lastDate = new Date(date[0], (date[1] - 1), date[2], 0, 0, 0);
-                                            var result = '';
-                                            if (newDate.getTime() > lastDate.getTime()) {
-                                                result = (newDate.getTime() - lastDate.getTime()) / 86400000;
-                                            } else {
-                                                result = Math.abs(newDate.getTime() - lastDate.getTime()) / 86400000;
-                                            }
-                                            return result;
-                                        }
-                                        numDays.innerHTML = tab('2017-01-04');
-                                    </script>
-                                </blockquote>
-                            </div>
-                        </li>
-                    </ul>
-                  
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Text banner section -->
-    <!-- portfolio section -->
-    <section id="works" class="works section no-padding">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
+
+   
+			<!-- Scroll -->
+		<div id="scroll-holder">
+
+			<div id="makeMeScrollable">
+			
+<!--
                     <a href="images/photo-1.jpg" class="photo-box">
-                        <img src="images/photo-1.jpg" alt="">
+                        <img src="img/photo-1.jpg" alt="">
                         <div class="overlay">
                             <div class="overlay-caption">
                                 <h5>照片</h5>
                                 <p><i class="fa fa-paint-brush fa-2x"></i></p>
                             </div>
                         </div>
-                        <!-- overlay -->
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
+                    </a>-->
                     <a href="images/photo-2.jpg" class="photo-box">
-                        <img src="images/photo-2.jpg" alt="">
+                        <img src="img/photo-2.jpg" alt="">
                         <div class="overlay">
                             <div class="overlay-caption">
                                 <h5>照片</h5>
                                 <p><i class="fa fa-cc-mastercard fa-2x"></i></p>
                             </div>
                         </div>
-                        <!-- overlay -->
                     </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
                     <a href="images/photo-3.jpg" class="photo-box">
-                        <img src="images/photo-3.jpg" alt="">
+                        <img src="img/photo-3.jpg" alt="">
                         <div class="overlay">
                             <div class="overlay-caption">
                                 <h5>照片</h5>
                                 <p><i class="fa fa-camera fa-2x"></i></p>
                             </div>
                         </div>
-                        <!-- overlay -->
                     </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
                     <a href="images/photo-4.jpg" class="photo-box">
-                        <img src="images/photo-4.jpg" alt="">
+                        <img src="img/photo-4.jpg" alt="">
                         <div class="overlay">
                             <div class="overlay-caption">
                                 <h5>照片</h5>
                                 <p><i class="fa fa-envelope-square fa-2x"></i></p>
                             </div>
                         </div>
-                        <!-- overlay -->
                     </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
                     <a href="images/photo-5.jpg" class="photo-box">
-                        <img src="images/photo-5.jpg" alt="">
+                        <img src="img/photo-5.jpg" alt="">
                         <div class="overlay">
                             <div class="overlay-caption">
                                 <h5>照片</h5>
                                 <p><i class="fa fa-paw fa-2x"></i></p>
                             </div>
                         </div>
-                        <!-- overlay -->
                     </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
+				
                     <a href="images/photo-6.jpg" class="photo-box">
-                        <img src="images/photo-6.jpg" alt="">
+                        <img src="img/photo-6.jpg" alt="">
                         <div class="overlay">
                             <div class="overlay-caption">
                                 <h5>照片</h5>
                                 <p><i class="fa fa-smile-o fa-2x"></i></p>
                             </div>
                         </div>
-                        <!-- overlay -->
                     </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
                     <a href="images/photo-7.jpg" class="photo-box">
-                        <img src="images/photo-7.jpg" alt="">
+                        <img src="img/photo-7.jpg" alt="">
                         <div class="overlay">
                             <div class="overlay-caption">
                                 <h5>照片</h5>
                                 <p><i class="fa fa-female fa-2x"></i></p>
                             </div>
                         </div>
-                        <!-- overlay -->
                     </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
                     <a href="images/photo-8.jpg" class="photo-box">
-                        <img src="images/photo-8.jpg" alt="">
+                        <img src="img/photo-8.jpg" alt="">
                         <div class="overlay">
                             <div class="overlay-caption">
                                 <h5>照片</h5>
                                 <p><i class="fa fa-graduation-cap fa-2x"></i></p>
                             </div>
                         </div>
-                        <!-- overlay -->
                     </a>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
-                    <a href="images/photo-9.jpg" class="photo-box">
-                        <img src="images/photo-9.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>照片</h5>
-                                <p><i class="fa fa-graduation-cap fa-2x"></i></p>
-                            </div>
-                        </div>
-                        <!-- overlay -->
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
-                    <a href="images/photo-10.jpg" class="photo-box">
-                        <img src="images/photo-10.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>照片</h5>
-                                <p><i class="fa fa-graduation-cap fa-2x"></i></p>
-                            </div>
-                        </div>
-                        <!-- overlay -->
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
-                    <a href="images/photo-11.jpg" class="photo-box">
-                        <img src="images/photo-11.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>照片</h5>
-                                <p><i class="fa fa-graduation-cap fa-2x"></i></p>
-                            </div>
-                        </div>
-                        <!-- overlay -->
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
-                    <a href="images/photo-12.jpg" class="photo-box">
-                        <img src="images/photo-12.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>照片</h5>
-                                <p><i class="fa fa-graduation-cap fa-2x"></i></p>
-                            </div>
-                        </div>
-                        <!-- overlay -->
-                    </a>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
-                    <a href="images/photo-13.jpg" class="photo-box">
-                        <img src="images/photo-13.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>照片</h5>
-                                <p><i class="fa fa-graduation-cap fa-2x"></i></p>
-                            </div>
-                        </div>
-                        <!-- overlay -->
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
-                    <a href="images/photo-14.jpg" class="photo-box">
-                        <img src="images/photo-14.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>照片</h5>
-                                <p><i class="fa fa-graduation-cap fa-2x"></i></p>
-                            </div>
-                        </div>
-                        <!-- overlay -->
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
-                    <a href="images/photo-15.jpg" class="photo-box">
-                        <img src="images/photo-15.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>照片</h5>
-                                <p><i class="fa fa-graduation-cap fa-2x"></i></p>
-                            </div>
-                        </div>
-                        <!-- overlay -->
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
-                    <a href="images/photo-16.jpg" class="photo-box">
-                        <img src="images/photo-16.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>照片</h5>
-                                <p><i class="fa fa-graduation-cap fa-2x"></i></p>
-                            </div>
-                        </div>
-                        <!-- overlay -->
-                    </a>
-                </div>
-
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
-                    <a href="images/photo-17.jpg" class="photo-box">
-                        <img src="images/photo-17.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>照片</h5>
-                                <p><i class="fa fa-graduation-cap fa-2x"></i></p>
-                            </div>
-                        </div>
-                        <!-- overlay -->
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
-                    <a href="images/photo-18.jpg" class="photo-box">
-                        <img src="images/photo-18.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>照片</h5>
-                                <p><i class="fa fa-graduation-cap fa-2x"></i></p>
-                            </div>
-                        </div>
-                        <!-- overlay -->
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
-                    <a href="images/photo-19.jpg" class="photo-box">
-                        <img src="images/photo-19.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>照片</h5>
-                                <p><i class="fa fa-graduation-cap fa-2x"></i></p>
-                            </div>
-                        </div>
-                        <!-- overlay -->
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 work">
-                    <a href="images/photo-20.jpg" class="photo-box">
-                        <img src="images/photo-20.jpg" alt="">
-                        <div class="overlay">
-                            <div class="overlay-caption">
-                                <h5>照片</h5>
-                                <p><i class="fa fa-graduation-cap fa-2x"></i></p>
-                            </div>
-                        </div>
-                        <!-- overlay -->
-                    </a>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- portfolio section -->
-    <!-- footer -->
-    <footer class="section footer">
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="col-md-12">
-                    <p>
-                        <ul class="footer-share">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-                            <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer -->
+				
+				
+					<!-- ENDS Scroll 
+						<a href="images/photo-1.jpg" title="Lorem ipsum dolor" ><img src="images/photo-1.jpg" /></a>
+						
+						<a href="images/photo-2.jpg" title="Lorem ipsum dolor" ><img src="images/photo-2.jpg" /></a>
+						
+						<a href="images/photo-3.jpg" title="Lorem ipsum dolor" ><img src="images/photo-3.jpg" /></a>
+						
+						<a href="images/photo-4.jpg" title="Lorem ipsum dolor" ><img src="images/photo-4.jpg" /></a>
+						
+						<a href="images/photo-5.jpg" title="Lorem ipsum dolor" ><img src="images/photo-5.jpg" /></a>
+						
+						<a href="images/photo-6.jpg" title="Lorem ipsum dolor" ><img src="images/photo-6.jpg" /></a>
+						
+						<a href="images/photo-7.jpg" title="Lorem ipsum dolor" ><img src="images/photo-7.jpg" /></a>
+						
+						<a href="images/photo-8.jpg" title="Lorem ipsum dolor" ><img src="images/photo-8.jpg" /></a>
+						
+						<a href="images/photo-9.jpg" title="Lorem ipsum dolor" ><img src="images/photo-9.jpg" /></a>
+						
+						<a href="images/photo-10.jpg" title="Lorem ipsum dolor" ><img src="images/photo-10.jpg" /></a>-->
+			</div>
+		</div>
+		<!-- ENDS Scroll -->
+	
     <!-- JS FILES -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -374,5 +143,20 @@
     <script src="js/retina.min.js"></script>
     <script src="js/modernizr.js"></script>
     <script src="js/main.js"></script>
+		    <!-- JS -->
+		<!-- jQuery library - Please load it from Google API's -->
+		<script src="js/scroller/jquery.min.js" ></script>
+		
+		<script src="js/scroller/js/jquery-ui-1.8.23.custom.min.js" ></script>
+		<script src="js/scroller/js/jquery.mousewheel.min.js" ></script>
+		<script src="js/scroller/js/jquery.kinetic.js" ></script>
+		<script src="js/scroller/js/jquery.smoothdivscroll-1.3-min.js" ></script>
+
+		<script  src="js/scroller/jquery.prettyPhoto.js"></script>
+		<script  src="js/scroller/superfish.js"></script>
+		<script  src="js/scroller/jquery.poshytip.min.js"></script>
+		<script  src="js/scroller/backstretch.js"></script>
+		<script  src="js/scroller/custom.js"></script>
+		<!-- ENDS JS -->
 </body>
 </html>
